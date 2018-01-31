@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<!-- rgb(79, 129, 189) colore da utilizzare in generale nel sito -->
+	<head>
+	<script>
+function importDomande(){
+  var file = fileInput.files[0];
+  var textType = /text.*/;
+  var csvType = 'application/vnd.ms-excel';
+
+  if (file.type.match(csvType)) {
+    var reader = new FileReader();
+    reader.onload = function(e) {
+      //document.getElementById("csvData").innerHTML=reader.result;
+	  var domande = reader.result;
+      console.log(domande);
+	  var res = domande.split("\n");
+    for (var i=0; i<res.length; i++)
+		console.log(i+"-> "+res[i]);
+	//document.getElementById("csvData").innerHTML = res[" "];
+    }
+    reader.readAsText(file);
+	}
+    else {
+    fileDisplayArea.innerText = "File non supportato!";
+    }
+    }  
+	// getElementById("invia").onClick("href",'../index.html');
+</script>
+		<title>Commiato</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+		<link rel="STYLESHEET" href="../css/ASL_000001.css">
+				<!-- Bootstrap v4.0.0a CSS libs -->
+		<link rel="STYLESHEET" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">	
+	</head>
+	<body>
+		<div id="container">	
+			<!-- intestazione del sito -->
+			<header class="col-md-12"> 
+				<h2 id="hAltoSinistra">Intervista cliente</h1>
+				<!-- il logo è da spostare a destra -->
+				<img class="logo" alt="Gruppo SCAI" src="../images/logo_scai.png">
+			</header>
+			<section>
+				
+				<p class="col-md-4">
+					Prima di iniziare carica il tuo file CSV per le domande.
+				</p>					
+			<div>
+			Carica CSV: <input type="file" id="fileInput">
+			</div>
+			<pre id="fileDisplayArea"><pre>
+			<p id="csvData"></p>
+			<button onClick="importDomande()">Carica CSV</button>	
+			<button onclick="location.href='../index.html'">Avanti</button>
+			</section>
+			<!-- aggiungere un bordo inferiore seguendo la foto del programma -->
+			<footer class="col-md-12"></footer>
+		</div>
+	</body>
+</html>

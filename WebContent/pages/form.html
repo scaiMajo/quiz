@@ -6,8 +6,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
 		<link rel="STYLESHEET" href="../css/ASL_000001.css">
 		<link rel="STYLESHEET" href="../css/ASL_000002.css">
-				<!-- Bootstrap v4.0.0a CSS libs -->
-		<link rel="STYLESHEET" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">	
+				<!-- Bootstrap v4.0.0a CSS libs -->		
+		<link rel="STYLESHEET" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="../js/script.js"></script>
+		
 	</head>
 	<body>
 		<div class="cnt">	
@@ -19,7 +23,7 @@
 			</header>
 			<div class="row" id="cont"> <!-- class row --> 
 				<div class="col-2" id="indietro" onClick="GestioneFrecce();">
-					<a><img src="../images/indietroEnabled.png" alt="indietro"></a>
+					<a><img src="../images/indietroEnabled.png" alt="indietro" onclick="DomandaIndietro(),GestioneFrecce()"></a>
 				</div>          
 				<div class="col-8 col-xs-6">        
 					<div class="row">
@@ -31,27 +35,27 @@
 						<div class="col-4">
 						<!-- radio buttons -->
 						<label class="container">
-							<input type="radio" name="optradio" class="button"><span class="text">Molto importante</span>
+							<input id="MI" type="radio" name="rd" class="button" onclick="risposta('Molto Importante')"><span class="text">Molto importante</span>
 							
 							<span class="checkmark"></span>
 						</label>
 						</div>
 						<div class="col-4">
 							<label class="container">
-								<input type="radio" name="optradio" class="button"><span class="text">Abbastanza importante</span>
+								<input id="AI" type="radio" name="rd" class="button" onclick="risposta('Abbastanza Importante')"><span class="text">Abbastanza importante</span>
 								<span class="checkmark"></span>
 							</label>
 						</div>
 						<div class="col-4">
 							<label class="container">
-								<input type="radio" name="optradio" class="button"><span class="text">Poco Importante</span>
+								<input id="PI" type="radio" name="rd" class="button" onclick="risposta('Poco Importante')"><span class="text">Poco Importante</span>
 								<span class="checkmark"></span>
 							</label>
 						</div>
 					</div>    
 				</div>
 				<div class="col-2" id="avanti">
-					<a><img src="../images/avantiEnabled.png" alt="avanti" onClick="GestioneFrecce();"></a>
+					<a><img src="../images/avantiEnabled.png" alt="avanti" onClick="DomandaAvanti(),GestioneFrecce()"></a>
 				</div>
 			</div><!-- fine class row -->
 			<div id="btnEnd_container">
