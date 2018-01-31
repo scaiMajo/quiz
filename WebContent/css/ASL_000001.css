@@ -1,1 +1,45 @@
-@charset "UTF-8";
+body{
+	background-color: white; 
+	 color: rgb(79,129,189);
+}
+*{ 
+   font-family: Calibri;
+   font-size: 30px;
+   color: rgb(79,129,189);
+}
+   
+.logo{ 
+	padding: 5px;
+	float: right;
+}
+		
+header{ 
+	border-top-width: 20px;
+	border-bottom-width: 2.5px;
+	border-top-style: solid;	
+	border-bottom-style: solid;
+}
+		
+footer{ 
+	border-bottom-width: 2,5px;
+	border-bottom-style: solid;
+}
+
+.container{ 
+	padding-left: 30px;
+	padding-top: 25px;
+}
+
+#hAltoSinistra{
+	display: inline;
+}
+
+#btnEnd_container{
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 20px;
+}
+
+#btnEnd{
+	border-radius: 5px;
+}
