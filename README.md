@@ -1,2 +1,0 @@
-# quiz
-Quiz soddisfazione cliente
