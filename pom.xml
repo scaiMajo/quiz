@@ -24,4 +24,24 @@
   		<scope>runtime</scope>
   	</dependency>
   </dependencies>
+<build>
+    <plugins>
+      <plugin>
+        <!--  create the war -->
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.2.0</version>
+        <configuration>
+          <failOnMissingWebXml>false</failOnMissingWebXml>
+          <webResources>
+            <resource>
+              <!-- this is relative to the pom.xml directory -->
+              <directory>WebContent/WEB-INF</directory>
+            </resource>
+          </webResources>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
 </project>
