@@ -50,7 +50,8 @@
     position: absolute;
     display: none;
 	-webkit-transform: scale(0.4);
-	
+	-ms-transform: scale(0.4);
+	-moz-transform: scale(0.4);
 }
 .container input:checked ~ .checkmark:after {
     display: block;
@@ -63,4 +64,7 @@
 	height: 8px;
 	color: rgb(255,255,255);
 	
+}
+#btnEnd{
+	visibility: hidden;
 }
