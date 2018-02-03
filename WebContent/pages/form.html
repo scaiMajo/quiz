@@ -22,8 +22,8 @@
 				<img class="logo" alt="Gruppo SCAI" src="../images/logo_scai.png">
 			</header>
 			<div class="row" id="cont"> <!-- class row --> 
-				<div class="col-2" id="indietro" onClick="GestioneFrecce();">
-					<a><img src="../images/indietroEnabled.png" alt="indietro" onclick="DomandaIndietro(),GestioneFrecce()"></a>
+				<div class="col-2">
+					<a><img src="../images/indietroEnabled.png" id="indietro" onclick="DomandaIndietro(),GestioneFrecce()"></a>
 				</div>          
 				<div class="col-8 col-xs-6">        
 					<div class="row">
@@ -54,12 +54,12 @@
 						</div>
 					</div>    
 				</div>
-				<div class="col-2" id="avanti">
-					<a><img src="../images/avantiEnabled.png" alt="avanti" onClick="DomandaAvanti(),GestioneFrecce()"></a>
+				<div class="col-2">
+					<a><img src="../images/avantiEnabled.png" id="avanti" onClick="DomandaAvanti(),GestioneFrecce()"></a>
 				</div>
 			</div><!-- fine class row -->
 			<div id="btnEnd_container">
-				<button type="button" id="btnEnd">END</button>
+				<button type="button" class="btnEnd">END</button>
 			</div>
   			<!-- aggiungere un bordo inferiore seguendo la foto del programma -->
  			<footer class="col-12"></footer>

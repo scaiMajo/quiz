@@ -65,6 +65,10 @@
 	color: rgb(255,255,255);
 	
 }
-#btnEnd{
+.btnEnd{
 	visibility: hidden;
+}
+
+.bottonefine{
+    visibility: visible;
 }
